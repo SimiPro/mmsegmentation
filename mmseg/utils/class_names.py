@@ -2,6 +2,14 @@
 from mmengine.utils import is_str
 
 
+def robin_classes():
+    """Robin class names for external use."""
+    return ['box', 'ice_pack']
+
+def robin_palette():
+    """Robin palette for external use."""
+    return [[20, 20, 255], [255, 20, 20]]
+
 def cityscapes_classes():
     """Cityscapes class names for external use."""
     return [
@@ -420,6 +428,7 @@ def lip_palette():
 
 
 dataset_aliases = {
+    'robin': ['robin'],
     'cityscapes': ['cityscapes'],
     'ade': ['ade', 'ade20k'],
     'voc': ['voc', 'pascal_voc', 'voc12', 'voc12aug'],
